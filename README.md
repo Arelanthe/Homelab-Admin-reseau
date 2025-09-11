@@ -28,7 +28,7 @@ Ce dépôt regroupe mes projets, exercices et notes réalisés sur mon environne
 ---
 
 ## 📅 Plan d’étude
-Le détail du plan de progression est disponible dans le dossier [`plan-etude/`](plan-etude/).
+Le détail du plan de progression est disponible dans le dossier [`plan-etude/`](Plan_Etude_Admin_Systemes_Reseaux.docx).
 
 ---
 
