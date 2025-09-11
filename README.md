@@ -43,9 +43,6 @@ homelab-admin-reseau/
 │ ├── vmware/
 │── docs/ # Schémas, PRA, notes globales
 
-yaml
-Copier le code
-
 ---
 
 ## 🚀 Projets
@@ -66,7 +63,7 @@ Copier le code
 ---
 
 ## 🧑‍💻 Auteur
-👋 Je suis [Ton Prénom / Pseudo], technicien informatique dans un groupement hospitalier, en apprentissage pour évoluer vers un poste d’**Administrateur Systèmes & Réseaux**.  
+👋 Je suis Quentin BARBIER, technicien informatique dans un groupement hospitalier, en apprentissage personnel pour évoluer vers un poste d’**Administrateur Systèmes & Réseaux**.  
 
 💼 Mon objectif : développer des compétences solides en systèmes, réseaux, sécurité et cloud pour intégrer une équipe IT en tant qu’admin.  
 
