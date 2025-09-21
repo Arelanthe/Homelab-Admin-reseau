@@ -1,0 +1,56 @@
+Fiche pratique – Gestion utilisateurs & Samba (Ubuntu)
+1️⃣ Gestion des utilisateurs
+Créer un utilisateur :
+
+sudo adduser alice
+sudo adduser bob
+sudo adduser charlie
+
+👉 Chaque commande crée le compte + mot de passe + répertoire /home/.
+Vérifier les utilisateurs :
+
+cat /etc/passwd | grep alice
+Ajouter un utilisateur à un groupe :
+
+sudo usermod -aG sudo alice
+
+👉 Ajoute alice au groupe sudo.
+2️⃣ Gestion des permissions
+Créer un dossier de test :
+
+sudo mkdir /srv/partage_alice
+Changer le propriétaire du dossier :
+
+sudo chown alice:alice /srv/partage_alice
+Limiter l’accès uniquement à Alice :
+
+sudo chmod 700 /srv/partage_alice
+
+👉 Seul Alice peut lire/écrire/exécuter dans ce dossier.
+3️⃣ Installation et configuration de Samba
+Installer Samba :
+
+sudo apt update
+sudo apt install samba -y
+Créer un utilisateur Samba (lié à Alice) :
+
+sudo smbpasswd -a alice
+Configurer le partage Samba (éditer /etc/samba/smb.conf) :
+
+[Partage_Alice]
+   path = /srv/partage_alice
+   valid users = alice
+   read only = no
+   browsable = yes
+Redémarrer Samba :
+
+sudo systemctl restart smbd
+4️⃣ Test du partage
+Depuis un poste Windows : \\IP_VM_Ubuntu\Partage_Alice
+
+👉 Connexion avec :
+- Utilisateur : alice
+- Mot de passe : défini avec smbpasswd
+✅ Résultat attendu :
+- Alice peut accéder à son partage.
+- Bob et Charlie n’ont pas accès.
